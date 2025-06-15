@@ -1,4 +1,4 @@
-@extends("layout")
+@extends("welcome")
 @section('title', 'employee')
 @section('body')
 <div class="max-w-3xl mx-auto p-8 bg-gray-50 rounded-2xl shadow-lg mt-12">

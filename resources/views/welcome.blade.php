@@ -23,7 +23,7 @@
             <div class="flex items-center space-x-4">
                 @auth
                     <span class="hidden sm:inline text-gray-600 text-sm">Bonjour, {{ Auth::user()->name }}</span>
-                    <form method="POST">
+                    <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit"
                             class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg text-sm">
@@ -31,7 +31,8 @@
                         </button>
                     </form>
                 @else
-                    <a 
+                    <a
+                    href="{{ route('login') }}"
                         class="text-sm text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg">
                         Connexion
                     </a>
